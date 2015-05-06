@@ -16,6 +16,7 @@ public class MyService extends Service {
     private static boolean isRunning = false;
     private int counter = 0;
 
+
     @Override
     public void onCreate() {
         super.onCreate();

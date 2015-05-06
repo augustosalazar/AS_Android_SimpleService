@@ -42,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
         startService(new Intent(MainActivity.this, MyService.class));
     }
 
-    public void DetenerrServicio(View view) {
+    public void DetenerServicio(View view) {
         stopService(new Intent(MainActivity.this, MyService.class));
     }
 }
