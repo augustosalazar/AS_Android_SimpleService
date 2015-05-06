@@ -1,9 +1,11 @@
 package com.augustosalazar.simpleservice;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -34,5 +36,13 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void IniciarServicio(View view) {
+        startService(new Intent(MainActivity.this, MyService.class));
+    }
+
+    public void DetenerrServicio(View view) {
+        stopService(new Intent(MainActivity.this, MyService.class));
     }
 }
