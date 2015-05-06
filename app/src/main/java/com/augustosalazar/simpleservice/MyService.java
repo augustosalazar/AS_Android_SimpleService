@@ -37,6 +37,15 @@ public class MyService extends Service {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mTimer != null) {mTimer.cancel();}
+        counter=0;
+        Log.i(TAG, "Service Stopped.");
+        isRunning = false;
+    }
+
+    @Override
     public IBinder onBind(Intent intent) {
         return null;
     }
